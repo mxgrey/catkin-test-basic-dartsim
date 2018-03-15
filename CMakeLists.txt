@@ -13,6 +13,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(someProgram src/main.cpp)
-target_link_libraries(someProgram dart)
-target_include_directories(someProgram DART_INCLUDE_DIRS)
+target_link_libraries(someProgram PRIVATE dart)
+target_include_directories(someProgram PRIVATE ${DART_INCLUDE_DIRS})
 
